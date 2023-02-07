@@ -4,7 +4,7 @@
 <html>
 <head>
     <title>Meals</title>
-    <style type="text/css">
+    <style>
         tr[excess="false"] {
             color: green;
         }
@@ -25,6 +25,7 @@
 <%@include file="header.jsp" %>
 <div>
     <h1>Meals</h1>
+    <a href="${pageContext.request.contextPath}/edit">Add Meal</a>
     <table>
         <tr>
             <th>Date</th>
@@ -36,6 +37,8 @@
                 <td>${fn:replace(meal.dateTime,"T"," ")}</td>
                 <td>${meal.description}</td>
                 <td>${meal.calories}</td>
+                <td><a href="${pageContext.request.contextPath}/edit?id=${meal.id}">Update</a></td>
+                <td><a href="${pageContext.request.contextPath}/delete?id=${meal.id}">Delete</a></td>
             </tr>
         </c:forEach>
     </table>

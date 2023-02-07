@@ -6,7 +6,7 @@ public final class JspHelper {
 
     private JspHelper() {}
 
-    public static String gerPath(String jspName){
+    public static String getPath(String jspName){
         return String.format(JSP_FORMAT, jspName);
     }
 }

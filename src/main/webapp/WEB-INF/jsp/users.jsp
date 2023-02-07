@@ -4,8 +4,10 @@
     <title>Users</title>
 </head>
 <body>
-<h3><a href="index.html">Home</a></h3>
-<hr>
-<h2>Users</h2>
+<%@include file="header.jsp" %>
+<div>
+    <h2>Users</h2>
+</div>
+<%@include file="footer.jsp" %>
 </body>
 </html>
